@@ -72,16 +72,16 @@ const calcTip = (billValue) => {
 // 3. Use the 'calcTip' function we wrote before (no need to repeat) to calculate tips and total values (bill + tip) for every bill value in the bills array. Use a for loop to perform the 10 calculations!
 // Test data: 22, 295, 176, 440, 37, 105, 10, 1100, 86 and 52
 
-let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-let tips = [];
-let totals = [];
-for (let i = 0; i < bills.length; i++) {
-  let tip = calcTip(bills[i]);
-  tips.push(tip);
-  totals.push(bills[i] + tip);
-}
-console.log(tips);
-console.log(totals);
+// let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// let tips = [];
+// let totals = [];
+// for (let i = 0; i < bills.length; i++) {
+//   let tip = calcTip(bills[i]);
+//   tips.push(tip);
+//   totals.push(bills[i] + tip);
+// }
+// console.log(tips);
+// console.log(totals);
 
 // 4. Bonus:Writeafunction'calcAverage'whichtakesanarraycalled'arr'as an argument. This function calculates the average of all numbers in the given array. This is a difficult challenge (we haven't done this before)! Here is how to solve it:
 // 4.1. First, you will need to add up all values in the array. To do the addition, start by creating a variable 'sum' that starts at 0. Then loop over the array using a for loop. In each iteration, add the current value to the 'sum' variable. This way, by the end of the loop, you have all values added together
@@ -97,3 +97,22 @@ console.log(totals);
 // }
 
 // console.log(calcAverage(totals))
+
+// Given an array of forecasted maximum temperatures, the thermometer displays a string with the given temperatures. Example: [17, 21, 23] will print "... 17oC in 1 days ... 21oC in 2 days ... 23oC in 3 days ..."
+// Your tasks:
+// 1. Create a function 'printForecast' which takes in an array 'arr' and logs a string like the above to the console. Try it with both test datasets.
+// 2. Use the problem-solving framework: Understand the problem and  break it up into sub-problems!
+// Test data:
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+
+const printForecast = (arr) => {
+  let str = '';
+  for (let i = 0; i < arr.length; i++) {
+    str += `${arr[i]} degress C in ${i + 1} days ... `;
+  }
+  console.log('... ' + str);
+};
+
+printForecast(data1);
+printForecast(data2);
