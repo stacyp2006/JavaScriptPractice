@@ -74,3 +74,14 @@ var numProducts = 10;
 function deleteShoppingCart() {
   console.log('All products deleted');
 }
+//Let vs Const vs Var
+//let and const do not create properties on the window object, because they arent hoisted/in the tdz
+
+var x = 1;
+let y = 2; 
+const z = 3;  
+
+//conventions
+// Use let and const, not var
+// Declare variables at the top of each scope
+// Declare all fxns first, then use them after the declarations
