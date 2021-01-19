@@ -120,12 +120,21 @@
 // const f = jonas.calcAge;
 // f();
 
+// var firstName = 'Matilda';
+
 const jonas = {
   firstName: 'Jonas',
   year: 1991,
   calcAge: function () {
-    console.group(this);
+    // console.log(this);
     console.log(2037 - this.year);
+
+    //this arrow fxn inherits this keyword value from parent scope
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
   },
   greet: () => console.log(`Hey ${this.firstName}`),
 };
@@ -133,3 +142,6 @@ const jonas = {
 //Returns undefined b/c arrow fxn doesn't get it's own this keyword
 //this is currently scoped globally
 jonas.greet();
+jonas.calcAge();
+
+//Might be a good idea to not use arrow functions as methods in objects
