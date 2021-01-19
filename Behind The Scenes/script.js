@@ -145,3 +145,19 @@ jonas.greet();
 jonas.calcAge();
 
 //Might be a good idea to not use arrow functions as methods in objects
+
+//Arguments keyword
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+
+addExpr(2, 5);
+addExpr(2, 5, 8, 12);
+
+const addArrow = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
+
+addArrow(2, 5, 8);
