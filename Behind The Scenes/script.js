@@ -177,3 +177,35 @@ const friend = me;
 friend.age = 27;
 console.log('Friend:', friend);
 console.log('Me:', me);
+
+//Primitive types
+let lastName = 'Williams';
+let oldLastName = lastName;
+lastName = 'Davis';
+console.log(lastName);
+console.log(oldLastName);
+
+//Reference types
+const jessica = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+};
+
+//not a new object in the heap
+const marriedJessica = jessica;
+marriedJessica.lastName = 'Davis';
+console.log('Before: ', jessica);
+console.log('After: ', marriedJessica);
+
+//copying objects
+const jessica2 = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+};
+
+const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = 'Davis';
+console.log('Before: ', jessica2);
+console.log('After: ', jessicaCopy);
