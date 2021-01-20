@@ -205,6 +205,7 @@ const jessica2 = {
   age: 27,
 };
 
+//Creates a shallow copy, only good to one level, will not mutate an array or object within the object
 const jessicaCopy = Object.assign({}, jessica2);
 jessicaCopy.lastName = 'Davis';
 console.log('Before: ', jessica2);
