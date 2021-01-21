@@ -37,6 +37,9 @@ const {
 } = restaurant;
 console.log(restaurantName, hours, tags);
 
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters);
+
 // const arr = [2, 3, 4];
 // const a = arr[0];
 // const b = arr[1];
