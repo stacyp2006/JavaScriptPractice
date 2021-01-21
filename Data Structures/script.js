@@ -11,6 +11,12 @@ const restaurant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 
+  orderDelivery: function ({ starterIndex, mainIndex, time, address }) {
+    console.log(
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+    );
+  },
+
   openingHours: {
     thu: {
       open: 12,
@@ -27,6 +33,12 @@ const restaurant = {
   },
 };
 
+restaurant.orderDelivery({
+  time: '22:30',
+  address: 'Via del Sole, 21',
+  mainIndex: 2,
+  starterIndex: 2,
+});
 const { categories, name, openingHours } = restaurant;
 console.log(name, categories, openingHours);
 
