@@ -30,3 +30,18 @@ const c = arr[2];
 
 const [x, y, z] = arr;
 console.log(x, y, z);
+
+const [first, , second] = restaurant.categories; //space skips an element
+console.log(first, second);
+
+let [main, , secondary] = restaurant.categories;
+console.log(main, secondary);
+
+//Switching variables
+// const temp = main;
+// main = secondary;
+// secondary = temp;
+// console.log(main, secondary);
+
+[main, secondary] = [secondary, main];
+console.log(main, secondary);
