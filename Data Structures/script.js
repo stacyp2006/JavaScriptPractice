@@ -163,3 +163,16 @@ const restaurantCopy = { ...restaurant };
 restaurantCopy.name = 'Ristorante Roma';
 console.log(restaurantCopy.name);
 console.log(restaurant.name);
+
+// The Rest Pattern
+const arr1 = [1, 2, ...[3, 4]]; // Spread because on right side of =
+
+const [a, b, ...others] = [1, 2, 3, 4, 5]; //Rest because on left side of =
+console.log(a, b, others);
+
+// rest pattern must be last element
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  restaurant.starterMenu,
+];
+console.log(pizza, risotto, otherFood);
