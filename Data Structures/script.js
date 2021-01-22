@@ -126,3 +126,10 @@ console.log(...newGoodArr);
 
 const newMenu = [...restaurant.mainMenu, 'Gnocchi'];
 console.log(newMenu);
+
+//Copy array --  creates shallow copy
+const mainMenuCopy = [...restaurant.mainMenu];
+
+//Join 2 or more arrays
+const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(menu);
