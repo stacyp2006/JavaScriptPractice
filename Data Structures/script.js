@@ -226,3 +226,9 @@ console.log(0 && 'Jonas'); //returns 0
 console.log(7 && 'Jonas'); //returns Jonas, when first value is truthy, second value gets evaluated and returned
 
 console.log('Hello' && 23 && null && 'jonas'); //returns null
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'spinach');
+}
+
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
