@@ -211,3 +211,10 @@ console.log(true || 0); //true
 console.log(undefined || null); //null, also falsy but prints anyway
 
 console.log(undefined || 0 || '' || 'Hello' || 23 || null); //Hello, b/c it is the first truthy value, short circuits the ones after
+
+restaurant.numGuests = 23;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
