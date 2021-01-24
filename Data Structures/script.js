@@ -203,6 +203,7 @@ const restaurant = {
 // restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 // restaurant.orderPizza('mushrooms');
 
+console.log('-----OR------');
 //use, return any data type and can short circuit
 //returns the first value as long as it is truthy, doesn't even eval the other value
 console.log(3 || 'Jonas'); //3
@@ -218,3 +219,10 @@ console.log(guests1);
 
 const guests2 = restaurant.numGuests || 10;
 console.log(guests2);
+
+console.log('------AND------');
+// && operator short circuits when the first value is falsy and returns that falsy value
+console.log(0 && 'Jonas'); //returns 0
+console.log(7 && 'Jonas'); //returns Jonas, when first value is truthy, second value gets evaluated and returned
+
+console.log('Hello' && 23 && null && 'jonas'); //returns null
