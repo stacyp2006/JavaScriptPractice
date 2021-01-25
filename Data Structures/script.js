@@ -48,6 +48,21 @@ const restaurant = {
   },
 };
 
+//property Names
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+let openStr = `We are open on ${properties.length} days: `;
+
+for (const day of properties) {
+  openStr += `${day}, `;
+}
+console.log(openStr);
+
+//property Values
+const values = Object.values(openingHours);
+console.log(values);
+
 // if (restaurant.openingHours && restaurant.openingHours.mon)
 //   console.log(restaurant.openingHours.mon.open);
 
@@ -64,14 +79,14 @@ const restaurant = {
 //}
 
 //Methods and optional chaining
-console.log(restaurant.order?.(0, 1) ?? 'method does not exist');
-console.log(restaurant.orderRisotto?.(0, 1) ?? 'method does not exist');
+// console.log(restaurant.order?.(0, 1) ?? 'method does not exist');
+// console.log(restaurant.orderRisotto?.(0, 1) ?? 'method does not exist');
 
 //Arrays
-const users = [{ name: 'Jonas', email: 'hello@jonas.com' }];
-console.log(users[0]?.name ?? 'User array empty'); //more concise than...
-if (users.length > 0) console.log(users[0].name);
-else console.log('user array is empty'); //line 72 does the same thing as lines 73-74
+// const users = [{ name: 'Jonas', email: 'hello@jonas.com' }];
+// console.log(users[0]?.name ?? 'User array empty'); //more concise than...
+// if (users.length > 0) console.log(users[0].name);
+// else console.log('user array is empty'); //line 72 does the same thing as lines 73-74
 
 // const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
