@@ -67,7 +67,11 @@ const restaurant = {
 console.log(restaurant.order?.(0, 1) ?? 'method does not exist');
 console.log(restaurant.orderRisotto?.(0, 1) ?? 'method does not exist');
 
-//
+//Arrays
+const users = [{ name: 'Jonas', email: 'hello@jonas.com' }];
+console.log(users[0]?.name ?? 'User array empty'); //more concise than...
+if (users.length > 0) console.log(users[0].name);
+else console.log('user array is empty'); //line 72 does the same thing as lines 73-74
 
 // const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
