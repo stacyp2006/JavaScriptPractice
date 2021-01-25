@@ -300,6 +300,31 @@ const restaurant = {
 // const guestsCorrect = restaurant.numGuests ?? 10;
 // console.log(guestsCorrect); //returns 0
 
+// --- SETS ---
+const ordersSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+console.log(ordersSet);
+
+console.log(new Set('Jonas'));
+
+console.log(ordersSet.size); //returns 3, sets don't have indexes
+console.log(ordersSet.has('Pizza')); //true
+console.log(ordersSet.has('Bread')); //false
+ordersSet.add('Garlic Bread');
+ordersSet.add('Garlic Bread');
+ordersSet.delete('Risotto');
+// ordersSet.clear(); // completely clears set
+console.log(ordersSet);
+//can't get data from a set, use an array in that use case
+
+for (const order of ordersSet) console.log(order);
+
 //CODING CHALLENGE
 // We're building a football betting app (soccer for my American friends 😅)!
 // Suppose we get data from a web service about a certain game ('game' variable on next page). In this challenge we're gonna work with that data.
@@ -393,34 +418,34 @@ const game = {
 //to get item and index
 
 //My solution
-const players = [...game.scored];
-for (let i = 0; i < players.length; i++) {
-  console.log(`Goal ${[i + 1]}: ${players[i]}`);
-}
+// const players = [...game.scored];
+// for (let i = 0; i < players.length; i++) {
+//   console.log(`Goal ${[i + 1]}: ${players[i]}`);
+// }
 
 //Jonas solution
-for (const [i, player] of game.scored.entries())
-  console.log(`Goal ${i + 1}: ${player}`);
+// for (const [i, player] of game.scored.entries())
+//   console.log(`Goal ${i + 1}: ${player}`);
 
 // 2. Use a loop to calculate the average odd and log it to the console(We already studied how to calculate averages, you can go check if you don't remember)
 
 //My Solution
-const values = Object.values(game.odds);
-let sum = 0;
-const average = function () {
-  for (let i = 0; i < values.length; i++) {
-    sum += values[i];
-  }
-  return sum / values.length;
-};
-console.log(average());
+// const values = Object.values(game.odds);
+// let sum = 0;
+// const average = function () {
+//   for (let i = 0; i < values.length; i++) {
+//     sum += values[i];
+//   }
+//   return sum / values.length;
+// };
+// console.log(average());
 
 //Jonas solution
-const odds = Object.values(game.odds);
-let average1 = 0;
-for (const odd of odds) average1 += odd;
-average1 /= odds.length;
-console.log(average1);
+// const odds = Object.values(game.odds);
+// let average1 = 0;
+// for (const odd of odds) average1 += odd;
+// average1 /= odds.length;
+// console.log(average1);
 
 // 3. Print the 3 odds to the console, but in a nice formatted way, exactly like this:
 // Odd of victory Bayern Munich: 1.33
@@ -429,10 +454,10 @@ console.log(average1);
 // Get the team names directly from the game object, don't hardcode them (except for "draw"). Hint: Note how the odds and the game objects have the same property names 😉
 
 //Jonas solution
-for (const [team, odd] of Object.entries(game.odds)) {
-  const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
-  console.log(`Odd of ${teamStr}: ${odd}`);
-}
+// for (const [team, odd] of Object.entries(game.odds)) {
+//   const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
+//   console.log(`Odd of ${teamStr}: ${odd}`);
+// }
 
 // 4. Bonus: Create an object called 'scorers' which contains the names of the players who scored as properties, and the number of goals as the value. In this game, it will look like this:
 //      {
