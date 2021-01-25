@@ -10,7 +10,7 @@ const openingHours = {
     open: 11,
     close: 23,
   },
-  [`day-${2 + 4}`]: {
+  [weekdays[5]]: {
     open: 0, // Open 24 hours
     close: 24,
   },
@@ -48,15 +48,30 @@ const restaurant = {
   },
 };
 
-const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+if (restaurant.openingHours && restaurant.openingHours.mon)
+  console.log(restaurant.openingHours.mon.open);
+
+//with optional chaining
+console.log(restaurant.openingHours.mon?.open); //testing for openingHours and Monday
+console.log(restaurant.openingHours?.mon?.open);
+
+//Example of optional chaining
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+for (const day of days) {
+  console.log(day);
+  const open = restaurant.openingHours[day]?.open ?? 'closed';
+  console.log(`On ${day}, we open at ${open}`);
+}
+
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
 //to get item
-for (const item of menu) console.log(item);
+// for (const item of menu) console.log(item);
 
 //to get item and index
-for (const [i, el] of menu.entries()) {
-  console.log(`${i + 1}: ${el}`);
-}
+// for (const [i, el] of menu.entries()) {
+//   console.log(`${i + 1}: ${el}`);
+// }
 
 // console.log([...menu.entries()]);
 
