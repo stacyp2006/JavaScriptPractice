@@ -53,6 +53,16 @@ const rest = new Map();
 rest.set('name', 'Classico Italiano');
 rest.set(1, 'Firenze');
 console.log(rest.set(2, 'Lisbon'));
+
+rest
+  .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'We are open')
+  .set(false, 'We are closed');
+
+console.log(rest.get('name'));
+console.log(rest.get(true));
 //property Names
 // const properties = Object.keys(openingHours);
 // console.log(properties);
