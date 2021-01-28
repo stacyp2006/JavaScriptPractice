@@ -48,6 +48,11 @@ const restaurant = {
   },
 };
 
+//MAPS
+const rest = new Map();
+rest.set('name', 'Classico Italiano');
+rest.set(1, 'Firenze');
+console.log(rest.set(2, 'Lisbon'));
 //property Names
 // const properties = Object.keys(openingHours);
 // console.log(properties);
@@ -301,36 +306,36 @@ const restaurant = {
 // console.log(guestsCorrect); //returns 0
 
 // --- SETS ---
-const ordersSet = new Set([
-  'Pasta',
-  'Pizza',
-  'Pizza',
-  'Risotto',
-  'Pasta',
-  'Pizza',
-]);
-console.log(ordersSet);
+// const ordersSet = new Set([
+//   'Pasta',
+//   'Pizza',
+//   'Pizza',
+//   'Risotto',
+//   'Pasta',
+//   'Pizza',
+// ]);
+// console.log(ordersSet);
 
-console.log(new Set('Jonas'));
+// console.log(new Set('Jonas'));
 
-console.log(ordersSet.size); //returns 3, sets don't have indexes
-console.log(ordersSet.has('Pizza')); //true
-console.log(ordersSet.has('Bread')); //false
-ordersSet.add('Garlic Bread');
-ordersSet.add('Garlic Bread');
-ordersSet.delete('Risotto');
-// ordersSet.clear(); // completely clears set
-console.log(ordersSet);
-//can't get data from a set, use an array in that use case
+// console.log(ordersSet.size); //returns 3, sets don't have indexes
+// console.log(ordersSet.has('Pizza')); //true
+// console.log(ordersSet.has('Bread')); //false
+// ordersSet.add('Garlic Bread');
+// ordersSet.add('Garlic Bread');
+// ordersSet.delete('Risotto');
+// // ordersSet.clear(); // completely clears set
+// console.log(ordersSet);
+// //can't get data from a set, use an array in that use case
 
-for (const order of ordersSet) console.log(order);
+// for (const order of ordersSet) console.log(order);
 
-//Example w/Sets
-const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
-const staffUnique = [...new Set(staff)];
-console.log(staffUnique);
+// //Example w/Sets
+// const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+// const staffUnique = [...new Set(staff)];
+// console.log(staffUnique);
 
-console.log(new Set('stacypotten').size);
+// console.log(new Set('stacypotten').size);
 
 //CODING CHALLENGE
 // We're building a football betting app (soccer for my American friends 😅)!
