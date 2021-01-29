@@ -68,10 +68,13 @@ console.log(question.get('question'));
 for (const [key, value] of question) {
   if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
 }
-const answer = Number(prompt('Your answer'));
+const answer = 3; //Number(prompt('Your answer'));
 console.log(answer);
 
 console.log(question.get(question.get('correct') === answer));
+
+//Convert Map to array
+console.log([...question]);
 
 //MAPS: fundamentals
 // const rest = new Map();
