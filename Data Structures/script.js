@@ -48,33 +48,47 @@ const restaurant = {
   },
 };
 
-//MAPS
-const rest = new Map();
-rest.set('name', 'Classico Italiano');
-rest.set(1, 'Firenze');
-console.log(rest.set(2, 'Lisbon'));
+const question = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'Correct'],
+  [false, 'Try again!'],
+]);
+console.log(question);
 
-rest
-  .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
-  .set('open', 11)
-  .set('close', 23)
-  .set(true, 'We are open')
-  .set(false, 'We are closed');
+console.log(Object.entries(openingHours));
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
+//MAPS: fundamentals
+// const rest = new Map();
+// rest.set('name', 'Classico Italiano');
+// rest.set(1, 'Firenze');
+// console.log(rest.set(2, 'Lisbon'));
 
-console.log(rest.get('name'));
-console.log(rest.get(true));
+// rest
+//   .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+//   .set('open', 11)
+//   .set('close', 23)
+//   .set(true, 'We are open')
+//   .set(false, 'We are closed');
 
-const time = 21;
-console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+// console.log(rest.get('name'));
+// console.log(rest.get(true));
 
-console.log(rest.has('categories'));
-rest.delete(2);
-rest.set([1, 2], 'Test');
-rest.set(document.querySelector('h1'), 'Heading');
-console.log(rest);
-console.log(rest.size);
+// const time = 21;
+// console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+// console.log(rest.has('categories'));
+// rest.delete(2);
+// rest.set([1, 2], 'Test');
+// rest.set(document.querySelector('h1'), 'Heading');
+// console.log(rest);
+// console.log(rest.size);
 // rest.clear();
-console.log(rest.get([1, 2])); //won't return Test because they are not the same object
+// console.log(rest.get([1, 2])); //won't return Test because they are not the same object
 
 //property Names
 // const properties = Object.keys(openingHours);
