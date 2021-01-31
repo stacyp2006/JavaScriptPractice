@@ -83,6 +83,15 @@ const announcement =
 console.log(announcement.replaceAll('door', 'gate'));
 console.log(announcement.replaceAll(/door/g, 'gate'));
 
+//Booleans: includes, startsWith, endsWith
+const plane1 = 'A320neo';
+console.log(plane1.includes('A320'));
+console.log(plane1.startsWith('A'));
+
+if (plane1.startsWith('A') && plane1.endsWith('neo')) {
+  console.log('Part of the new Airbus family');
+}
+
 //indexOf and slice
 // console.log(plane[0]);
 // console.log(plane[1]);
