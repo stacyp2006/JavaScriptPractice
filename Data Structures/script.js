@@ -48,6 +48,18 @@ const restaurant = {
   },
 };
 
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log('B737'[0]);
+console.log(airline.length);
+
+//-----STRINGS-----//
+
+//-----MAPS-----//
 // const question = new Map([
 //   ['question', 'What is the best programming language in the world?'],
 //   [1, 'C'],
@@ -104,6 +116,7 @@ const restaurant = {
 // rest.clear();
 // console.log(rest.get([1, 2])); //won't return Test because they are not the same object
 
+//-----OBJECTS-----//
 //property Names
 // const properties = Object.keys(openingHours);
 // console.log(properties);
@@ -545,8 +558,8 @@ const gameEvents = new Map([
 ]);
 
 // 1. Create an array 'events' of the different game events that happened(no duplicates)
-const events = [...new Set(gameEvents.values())];
-console.log(events);
+// const events = [...new Set(gameEvents.values())];
+// console.log(events);
 
 // 2. After the game has finished, is was found that the yellow card from minute 64 was unfair. So remove this event from the game events log.
 
@@ -554,12 +567,12 @@ gameEvents.delete(64);
 
 // 3. Compute and log the following string to the console:"An event happened, on average, every 9 minutes" (keep in mind that a game has 90 minutes)
 
-console.log(
-  `An event happened, on average every ${90 / gameEvents.size} minutes`
-);
+// console.log(
+//   `An event happened, on average every ${90 / gameEvents.size} minutes`
+// );
 // 4. Loopover 'gameEvents' and log each element to the console, marking whether it's in the first half or second half (after 45 min) of the game, like this:
 // [FIRST HALF] 17: ⚽   GOAL
-for (const [min, event] of gameEvents) {
-  const half = min <= 45 ? 'FIRST' : 'SECOND';
-  console.log(`[${half} HALF] ${min}: ${event}`);
-}
+// for (const [min, event] of gameEvents) {
+//   const half = min <= 45 ? 'FIRST' : 'SECOND';
+//   console.log(`[${half} HALF] ${min}: ${event}`);
+// }
