@@ -48,6 +48,8 @@ const restaurant = {
   },
 };
 
+//-----STRINGS-----//
+
 const airline = 'TAP Air Portugal';
 const plane = 'A320';
 
@@ -72,7 +74,18 @@ console.log(airline.slice(airline.lastIndexOf(' ') + 1));
 console.log(airline.slice(-2)); //last two letters
 console.log(airline.slice(1, -1));
 
-//-----STRINGS-----//
+const checkMiddleSeat = function (seat) {
+  const s = seat.slice(-1);
+  if (s === 'B' || s === 'E') {
+    console.log('You got the middle seat');
+  } else {
+    console.log('You got lucky');
+  }
+};
+
+checkMiddleSeat('11B');
+checkMiddleSeat('23C');
+checkMiddleSeat('3E');
 
 //-----MAPS-----//
 // const question = new Map([
