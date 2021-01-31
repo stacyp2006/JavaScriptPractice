@@ -57,6 +57,21 @@ console.log(plane[2]);
 console.log('B737'[0]);
 console.log(airline.length);
 
+//indexOf()
+console.log(airline.indexOf('r')); //first occurrence
+console.log(airline.lastIndexOf('r')); //last occurrence
+console.log(airline.indexOf('Portugal')); //case sensitive
+
+//slice(beginning value, end value)
+console.log(airline.slice(4)); //returns 'Air Portugal'
+console.log(airline.slice(4, 7)); //returns 'Air'
+
+console.log(airline.slice(0, airline.indexOf(' ')));
+console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+console.log(airline.slice(-2)); //last two letters
+console.log(airline.slice(1, -1));
+
 //-----STRINGS-----//
 
 //-----MAPS-----//
