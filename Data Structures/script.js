@@ -131,6 +131,14 @@ const message = 'Go to gate 23!';
 console.log(message.padStart(25, '+').padEnd(35, '+'));
 console.log('Jonas'.padStart(25, '+'));
 
+const maskCreditCard = function (number) {
+  const str = number + '';
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+};
+
+console.log(maskCreditCard(4333567891232345));
+
 //indexOf and slice
 // console.log(plane[0]);
 // console.log(plane[1]);
