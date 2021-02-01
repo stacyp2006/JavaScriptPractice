@@ -105,6 +105,12 @@ checkBaggage('I have a laptop, some food and a pocket Knife');
 checkBaggage('Socks and a camera');
 checkBaggage('Got some snacks and a gun for protection');
 
+//split()
+console.log('a+very+nice+string'.split('+'));
+console.log('Jonas Schmedtmann'.split(' '));
+
+const [firstName, lastName] = 'Jonas Schmedtmann'.split(' ');
+
 //indexOf and slice
 // console.log(plane[0]);
 // console.log(plane[1]);
