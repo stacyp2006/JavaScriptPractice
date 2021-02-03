@@ -33,7 +33,7 @@ const jonas = {
 };
 
 const checkIn = function (flightNum, passenger) {
-  flightNum = 'LH234';
+  flightNum = 'LH299';
   passenger.name = 'Mr. ' + passenger.name;
 
   if (passenger.passport === 247869584738) {
@@ -46,3 +46,10 @@ const checkIn = function (flightNum, passenger) {
 checkIn(flight, jonas);
 console.log(flight);
 console.log(jonas);
+
+const newPassport = function (person) {
+  person.passport = Math.trunc(Math.random() * 10000000000);
+};
+
+newPassport(jonas);
+checkIn(flight, jonas);
