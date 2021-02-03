@@ -72,3 +72,15 @@ const transformer = function (str, fn) {
 
 transformer('JavaScript is the best!', upperFirstWord);
 transformer('JavaScript is the best!', oneWord);
+
+const high5 = function () {
+  console.log('👋');
+};
+
+document.body.addEventListener('click', high5);
+
+['Jonas', 'Martha', 'Adam'].forEach(high5);
+
+//callbacks allow us to create abstraction
+//allows us to hide detail of code implementation because we really don't care about all that detail
+//allows us to think about problems at a higher, more abstract level
