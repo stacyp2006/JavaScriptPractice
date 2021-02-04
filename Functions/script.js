@@ -54,33 +54,46 @@
 // newPassport(jonas);
 // checkIn(flight, jonas);
 
-const oneWord = function (str) {
-  return str.replace(/ /g, '').toLowerCase();
-};
+// const oneWord = function (str) {
+//   return str.replace(/ /g, '').toLowerCase();
+// };
 
-const upperFirstWord = function (str) {
-  const [first, ...others] = str.split(' ');
-  return [first.toUpperCase(), ...others].join(' ');
-};
+// const upperFirstWord = function (str) {
+//   const [first, ...others] = str.split(' ');
+//   return [first.toUpperCase(), ...others].join(' ');
+// };
 
-//higher order fxn
-const transformer = function (str, fn) {
-  console.log(`Original string: ${str}`);
-  console.log(`Transformed string: ${fn(str)}`);
-  console.log(`Transformed by: ${fn.name}`);
-};
+// //higher order fxn
+// const transformer = function (str, fn) {
+//   console.log(`Original string: ${str}`);
+//   console.log(`Transformed string: ${fn(str)}`);
+//   console.log(`Transformed by: ${fn.name}`);
+// };
 
-transformer('JavaScript is the best!', upperFirstWord);
-transformer('JavaScript is the best!', oneWord);
+// transformer('JavaScript is the best!', upperFirstWord);
+// transformer('JavaScript is the best!', oneWord);
 
-const high5 = function () {
-  console.log('👋');
-};
+// const high5 = function () {
+//   console.log('👋');
+// };
 
-document.body.addEventListener('click', high5);
+// document.body.addEventListener('click', high5);
 
-['Jonas', 'Martha', 'Adam'].forEach(high5);
+// ['Jonas', 'Martha', 'Adam'].forEach(high5);
 
 //callbacks allow us to create abstraction
 //allows us to hide detail of code implementation because we really don't care about all that detail
 //allows us to think about problems at a higher, more abstract level
+
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
+
+//example of closure
+const greeterHey = greet('Hey');
+greeterHey('Jonas');
+greeterHey('Stephen');
+
+greet('Hello')('Jonas');
