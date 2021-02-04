@@ -85,11 +85,14 @@
 //allows us to hide detail of code implementation because we really don't care about all that detail
 //allows us to think about problems at a higher, more abstract level
 
-const greet = function (greeting) {
-  return function (name) {
-    console.log(`${greeting} ${name}`);
-  };
-};
+// const greet = function (greeting) {
+//   return function (name) {
+//     console.log(`${greeting} ${name}`);
+//   };
+// };
+
+//As an arrow function
+const greet = greeting => name => console.log(`${greeting} ${name}`);
 
 //example of closure
 const greeterHey = greet('Hey');
