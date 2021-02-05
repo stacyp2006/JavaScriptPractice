@@ -125,4 +125,7 @@ const eurowings = {
 
 const book = lufthansa.book;
 
-book(23, 'Sarah Williams');
+//book.(23, 'Sarah Williams'); Does not work
+
+book.call(eurowings, 23, 'Sarah Williams');
+console.log(eurowings);
