@@ -118,7 +118,7 @@ lufthansa.book(635, 'John Smith');
 console.log(lufthansa);
 
 const eurowings = {
-  name: 'Eurowings',
+  airline: 'Eurowings',
   code: 'EW',
   bookings: [],
 };
@@ -129,3 +129,19 @@ const book = lufthansa.book;
 
 book.call(eurowings, 23, 'Sarah Williams');
 console.log(eurowings);
+
+book.call(lufthansa, 432, 'Stacy Potten');
+
+const swiss = {
+  airline: 'Swiss Air Lines',
+  code: 'LX',
+  bookings: [],
+};
+
+book.call(swiss, 485, 'Martha Miller');
+
+//Apply method
+const flightData = [583, 'George Cooper'];
+book.apply(swiss, flightData);
+console.log(swiss);
+book.call(swiss, ...flightData); //Does same as .apply()
