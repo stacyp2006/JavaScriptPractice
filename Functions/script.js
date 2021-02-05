@@ -92,11 +92,22 @@
 // };
 
 //As an arrow function
-const greet = greeting => name => console.log(`${greeting} ${name}`);
+// const greet = greeting => name => console.log(`${greeting} ${name}`);
 
-//example of closure
-const greeterHey = greet('Hey');
-greeterHey('Jonas');
-greeterHey('Stephen');
+// //example of closure
+// const greeterHey = greet('Hey');
+// greeterHey('Jonas');
+// greeterHey('Stephen');
 
-greet('Hello')('Jonas');
+// greet('Hello')('Jonas');
+
+const lufthansa = {
+  airline: 'Lufthansa',
+  code: 'LH',
+  bookings: [],
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.code}${flightNum}`
+    );
+  },
+};
