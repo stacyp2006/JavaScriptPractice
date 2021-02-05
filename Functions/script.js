@@ -109,5 +109,16 @@ const lufthansa = {
     console.log(
       `${name} booked a seat on ${this.airline} flight ${this.code}${flightNum}`
     );
+    this.bookings.push({ flight: `${this.code}${flightNum}`, name });
   },
+};
+
+lufthansa.book(239, 'Jonas Schmedtmann');
+lufthansa.book(635, 'John Smith');
+console.log(lufthansa);
+
+const eurowings = {
+  name: 'Eurowings',
+  code: 'EW',
+  bookings: [],
 };
