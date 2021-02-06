@@ -145,3 +145,9 @@ const flightData = [583, 'George Cooper'];
 book.apply(swiss, flightData);
 console.log(swiss);
 book.call(swiss, ...flightData); //Does same as .apply()
+
+//Bind method: returns a new fxn where this keyword is bound
+const bookEW = book.bind(eurowings);
+const bookLH = book.bind(lufthansa);
+const bookLX = book.bind(swiss);
+bookEW(23, 'Steven Williams');
