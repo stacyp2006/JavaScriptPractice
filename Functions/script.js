@@ -167,3 +167,12 @@ lufthansa.buyPlane = function () {
 document
   .querySelector('.buy')
   .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
+
+//Partial application
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.1, 200));
+
+const addVAT = addTax.bind(null, 0.23); //must have null as first arg if you don't care about this keyword
+//addVAT = value => value + value * 0.23;
+
+console.log(addVAT(100));
