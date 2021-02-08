@@ -249,6 +249,12 @@ runOnce();
 
 (function () {
   console.log('This will never run again');
+  const isPrivate = 23; //encapsulated in this function
 })();
 
 (() => console.log('This will ALSO never run again'))();
+
+{
+  const isPrivate = 23; //still not accessible globally
+  var notPrivate = 46; //accessible globally
+}
