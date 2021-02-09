@@ -242,19 +242,40 @@
 // poll.displayResults.call({ answers: [5, 2, 3] });
 
 // IIFE - functions that are called and run only once
-const runOnce = function () {
-  console.log('This will never run again');
+// const runOnce = function () {
+//   console.log('This will never run again');
+// };
+// runOnce();
+
+// (function () {
+//   console.log('This will never run again');
+//   const isPrivate = 23; //encapsulated in this function
+// })();
+
+// (() => console.log('This will ALSO never run again'))();
+
+// {
+//   const isPrivate = 23; //still not accessible globally
+//   var notPrivate = 46; //accessible globally
+// }
+
+//-----CLOSURES-----//
+//not a feature we explicitly use, happens automatically in certain situations
+
+const secureBooking = function () {
+  let passengerCount = 0;
+
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
 };
-runOnce();
 
-(function () {
-  console.log('This will never run again');
-  const isPrivate = 23; //encapsulated in this function
-})();
+const booker = secureBooking();
 
-(() => console.log('This will ALSO never run again'))();
+//a closure makes a function remember all of the variables at their birthplace
+//booker has access to variable environment of secureBooking
 
-{
-  const isPrivate = 23; //still not accessible globally
-  var notPrivate = 46; //accessible globally
-}
+booker();
+booker();
+booker();
