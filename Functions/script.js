@@ -262,25 +262,50 @@
 //-----CLOSURES-----//
 //not a feature we explicitly use, happens automatically in certain situations
 
-const secureBooking = function () {
-  let passengerCount = 0;
+// const secureBooking = function () {
+//   let passengerCount = 0;
 
-  return function () {
-    passengerCount++;
-    console.log(`${passengerCount} passengers`);
-  };
-};
+//   return function () {
+//     passengerCount++;
+//     console.log(`${passengerCount} passengers`);
+//   };
+// };
 
-const booker = secureBooking();
+// const booker = secureBooking();
 
 //a closure makes a function remember all of the variables at their birthplace
 //booker has access to variable environment of secureBooking
 
-booker();
-booker();
-booker();
+// booker();
+// booker();
+// booker();
 
 // A closure is the closed-over variable environment of the execution context in which a function was created, even AFTER that execution context is gone.
 // gives a fxn access to all the variables of the parent fxn, even afer taht parent fxn has returned. The fxn keeps a reference to its outer scope, which preserves the scope chain throughout time.
 
-console.dir(booker);
+// console.dir(booker);
+
+//More closure examples
+
+let f;
+const g = function () {
+  const a = 23;
+  f = function () {
+    console.log(a * 2);
+  };
+};
+
+const h = function () {
+  const b = 777;
+  f = function () {
+    console.log(b * 2);
+  };
+};
+
+g();
+f();
+
+//Reassigning f function
+h();
+f();
+console.dir(f);
