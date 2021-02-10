@@ -287,6 +287,7 @@
 
 //More closure examples
 
+//Example 1
 let f;
 const g = function () {
   const a = 23;
@@ -309,3 +310,20 @@ f();
 h();
 f();
 console.dir(f);
+
+//Example 2
+
+const boardPassengers = function (n, wait) {
+  const perGroup = n / 3;
+
+  setTimeout(function () {
+    console.log(`We are now boarding all ${n} passengers`);
+    console.log(`There are 3 groups, each with ${perGroup} passengers`);
+  }, wait * 1000);
+
+  console.log(`Will start boarding in ${wait} seconds`);
+};
+
+const perGroup = 1000; //Closure has priority over global scope in scope chain
+boardPassengers(180, 3);
+//setTimeout acted independently b/c a closure is created;
