@@ -279,3 +279,8 @@ const booker = secureBooking();
 booker();
 booker();
 booker();
+
+// A closure is the closed-over variable environment of the execution context in which a function was created, even AFTER that execution context is gone.
+// gives a fxn access to all the variables of the parent fxn, even afer taht parent fxn has returned. The fxn keeps a reference to its outer scope, which preserves the scope chain throughout time.
+
+console.dir(booker);
