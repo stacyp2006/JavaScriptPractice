@@ -288,42 +288,52 @@
 //More closure examples
 
 //Example 1
-let f;
-const g = function () {
-  const a = 23;
-  f = function () {
-    console.log(a * 2);
-  };
-};
+// let f;
+// const g = function () {
+//   const a = 23;
+//   f = function () {
+//     console.log(a * 2);
+//   };
+// };
 
-const h = function () {
-  const b = 777;
-  f = function () {
-    console.log(b * 2);
-  };
-};
+// const h = function () {
+//   const b = 777;
+//   f = function () {
+//     console.log(b * 2);
+//   };
+// };
 
-g();
-f();
+// g();
+// f();
 
-//Reassigning f function
-h();
-f();
-console.dir(f);
+// //Reassigning f function
+// h();
+// f();
+// console.dir(f);
 
 //Example 2
 
-const boardPassengers = function (n, wait) {
-  const perGroup = n / 3;
+// const boardPassengers = function (n, wait) {
+//   const perGroup = n / 3;
 
-  setTimeout(function () {
-    console.log(`We are now boarding all ${n} passengers`);
-    console.log(`There are 3 groups, each with ${perGroup} passengers`);
-  }, wait * 1000);
+//   setTimeout(function () {
+//     console.log(`We are now boarding all ${n} passengers`);
+//     console.log(`There are 3 groups, each with ${perGroup} passengers`);
+//   }, wait * 1000);
 
-  console.log(`Will start boarding in ${wait} seconds`);
-};
+//   console.log(`Will start boarding in ${wait} seconds`);
+// };
 
-const perGroup = 1000; //Closure has priority over global scope in scope chain
-boardPassengers(180, 3);
+// const perGroup = 1000; //Closure has priority over global scope in scope chain
+// boardPassengers(180, 3);
 //setTimeout acted independently b/c a closure is created;
+
+// More practice w/IIFE and closure
+(function () {
+  const header = document.querySelector('h1');
+  header.style.color = 'red';
+
+  document.querySelector('body').addEventListener('click', function () {
+    header.style.color = 'blue';
+  });
+})();
