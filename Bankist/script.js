@@ -97,3 +97,6 @@ console.log(arr2.reverse());
 //concat method
 const letters = arr.concat(arr2);
 console.log(letters); //same as [...arr, ...arr2]
+
+//join
+console.log(letters.join(' - '));
