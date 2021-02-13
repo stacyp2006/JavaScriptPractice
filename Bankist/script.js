@@ -88,3 +88,12 @@ console.log(arr.splice(2));
 // console.log(arr.splice(2));
 arr.splice(-1);
 console.log(arr);
+
+//reverse method -- mutates the original array
+arr = ['a', 'b', 'c', 'd', 'e'];
+const arr2 = ['j', 'i', 'h', 'g', 'f'];
+console.log(arr2.reverse());
+
+//concat method
+const letters = arr.concat(arr2);
+console.log(letters); //same as [...arr, ...arr2]
