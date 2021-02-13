@@ -76,12 +76,15 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 /////////////////////////////////////////////////
 let arr = ['a', 'b', 'c', 'd', 'e'];
 
-//slice method
+//slice method - returns a section of the array without mutating the original array
 console.log(arr.slice(2));
 console.log(arr.slice(2, 4));
 console.log(arr.slice(-2));
 console.log(arr.slice(-1));
 console.log(arr.slice()); //shallow copy
 
-//splice method
+//splice method - mutates original array - args (start, # to remove, item to insert/replace)
 console.log(arr.splice(2));
+// console.log(arr.splice(2));
+arr.splice(-1);
+console.log(arr);
